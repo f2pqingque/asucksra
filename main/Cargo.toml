@@ -1,0 +1,26 @@
+[workspace]
+resolver = "2"
+members = [ "asucksra-crawler","dc-bot"]
+
+[workspace.dependencies]
+poise = "0.6.1"
+regex = "1.11.1"
+reqwest = "0.12.9"
+scraper = "0.22.0"
+tokio = { version = "1.42.0", features = ["macros", "rt-multi-thread", "sync"] }
+asucksra-crawler = { path = "asucksra-crawler/" }
+
+[profile.release]
+strip = true
+lto = true
+opt-level = 3
+codegen-units = 1
+# set this shit to "abort"
+# if you want it to always crash
+# when theres a panic
+panic = "unwind"
+
+[profile.release.build-override]
+strip = true
+opt-level = 3
+codegen-units = 1
