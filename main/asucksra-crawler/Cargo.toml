@@ -4,8 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
-poise.workspace = true
 regex.workspace = true
 reqwest.workspace = true
 scraper.workspace = true
-tokio.workspace = true
