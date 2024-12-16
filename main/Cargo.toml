@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = [ "asucksra-crawler","dc-bot"]
+members = [ "asucksra-crawler","dc-bot", "web"]
 
 [workspace.dependencies]
 poise = "0.6.1"
@@ -9,6 +9,8 @@ reqwest = "0.12.9"
 scraper = "0.22.0"
 tokio = { version = "1.42.0", features = ["macros", "rt-multi-thread", "sync"] }
 asucksra-crawler = { path = "asucksra-crawler/" }
+axum = "0.7.9"
+axum-server = "0.7.1"
 
 [profile.release]
 strip = true

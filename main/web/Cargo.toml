@@ -1,0 +1,10 @@
+[package]
+name = "web"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio.workspace = true
+asucksra-crawler.workspace = true
+axum.workspace = true
+axum-server.workspace = true
